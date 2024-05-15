@@ -37,6 +37,7 @@ async function fetchForecast(location) {
     })
     .catch((error) => {
       console.error(error);
+      throw new Error(`Error fetching forecast for ${locationName}`);
     });
 }
 
